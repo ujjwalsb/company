@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>{{title}}</title>
+</head>
+<body style="text-align: center;">
+<a href="/" style="float: left;"><button style="font-size: 20px;">Back to Company List</button></a>
+<a href="/createreview/" style="float: right;"><button style="font-size: 20px;">Write a review</button></a>
+<br/><br/>
+{% for data in data_values %}
+    <label><b>Name of the reviewer: </b></label> {{data.reviewer_name}}<br/>
+    <label><b>Rating: </b></label> {{data.rating}}<br/>
+    <label><b>Subject: </b></label> {{data.subject}}<br/>
+    <label><b>Body: </b></label> {{data.body}}<br/>
+    <label><b>Review Date: </b></label> {{data.review_date}}<br/>
+<!--{% for company in company_values %}-->
+    <!--<label><b>Company: </b></label> {{ company.name }}-->
+<!--{% endfor %}-->
+<hr/>
+{% endfor %}
+
+
+</body>
+</html>

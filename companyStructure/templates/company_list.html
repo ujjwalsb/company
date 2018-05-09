@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>{{title}}</title>
+</head>
+<body style="text-align: center;">
+<a href="/createcompany/"><button style="font-size: 20px;">Create Company</button></a>
+<br/><br/>
+
+  <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+
+{% for data in filter.qs %}
+    <label><b>Name: </b></label> {{data.name}}<br/>
+    <label><b>Location: </b></label> {{data.location}}<br/>
+    <label><b>Average Rating: </b></label> {{ data.avg_rating }}<br/>
+    <label><b>Number of Review: </b></label> {{ review }}<br/>
+    <a href="/review/"><button>Reviews</button></a>
+<hr/>
+{% endfor %}
+</body>
+</html>
